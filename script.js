@@ -123,6 +123,17 @@ const questions =[
     }
 ];
 
+const profiles = {
+    artemis: `You dominate the night. <br>Artemis students are analytical and curious, often gravitating toward Physics, Chemistry, Math, and Economics.`,
+    helios: `You dominate the sky. <br>Helios students walk their own path, known for unconventional subject combinations and creative thinking.`,
+    athena: `You dominate wisdom. <br>Athena students value understanding and balance, commonly taking Biology, Chemistry, Math, and Economics.`,
+    poseidon: `You dominate the depths. <br>Poseidon students thrive in expression and interpretation, often leaning toward arts and humanities, sometimes paired with sciences.`,
+    hype: `“Energy first, think later.” <br><br>You are the embodiment of enthusiasm. When something exciting happens, you’re already there — probably yelling, probably smiling. You thrive on momentum, spontaneity, and shared excitement.`,
+    mugger: `“Locked in. No distractions.”<br><br>You are focused, driven, and determined. When you set a goal, you commit to it fully — whether it’s academics, self-improvement, or proving something (to yourself or others).`,
+    social: `“People first, always.” <br><br>You’re warm, friendly, and naturally curious about others. Conversations energise you, and you value connection over competition.`,
+    noncha: `“It is what it is.”<br><br>You’re calm, composed, and unfazed. While chaos unfolds around you, you remain cool and grounded. You don’t rush, and you don’t stress unless absolutely necessary.`
+}
+
 // starting 
 document.getElementById('quiz').style.display = 'none';
 document.getElementById('result').style.display = 'none';
@@ -225,8 +236,10 @@ function show_result(){
 
     // display
     const result = document.getElementById('result');
-    let html = `<p> ${final_house} <br> ${final_person} </p>`
-    html += `<img src="images/artemis.PNG">`
+    let html = `<h1> Results </h1>`
+    html += `<img class="img" src="images/${final_house}.PNG">`
+    html += `<p> <b> Your house: </b>${final_house} <br> <b>Your personality: </b>${final_person} </p>`
+    html += `<p>${profiles[final_house]} <br><br> ${profiles[final_person]}</p>`
     //html += `<img src="images/${final_house}_${final_person}.jpg>"`
     result.innerHTML = html
 
