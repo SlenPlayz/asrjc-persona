@@ -226,7 +226,7 @@ function show_result(){
     // display
     const result = document.getElementById('result');
     let html = `<p> ${final_house} <br> ${final_person} </p>`
-    html += `<img src="images/${final_house}.PNG">`
+    html += `<img src="images/artemis.PNG">`
     //html += `<img src="images/${final_house}_${final_person}.jpg>"`
     result.innerHTML = html
 
