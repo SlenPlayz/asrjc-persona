@@ -42,9 +42,10 @@
 			padding: 14px 16px;
 			border-radius: 10px;
 			color: var(--3-color);	
+			font-size: 16px;
 		}
 		
-		.btn:hover{
+		.btn:hover, .btn:active{
 			background-color: var(--5-color);
 		}
 		
@@ -94,6 +95,10 @@
 			word-wrap: break-word;
 		}
 
+		.result{
+			background-color: var(--5-color);
+		}
+
 	</style>
 </head>
 
@@ -104,6 +109,7 @@
 		<button class="restart_btn" id="start_btn"> Start </button>
 	</div>
 	
+	<div class="bar" id="bar"></div>
 	<div class="quiz" id="quiz">
 		<!-- elements will be generated w javascript -->
 	</div>

@@ -12,7 +12,8 @@ var scores = {
 
 // questions
 const questions =[
-    // 1
+    /*
+    // 1 screaming aliens
     {
         question: "Welcome to AStaR! You’ve been abducted by an alien.",
         choices: [
@@ -32,7 +33,18 @@ const questions =[
             {text: 'Sure.', type: 'noncha'},
             {text: "Hi bob! You're so cute <3", type: 'social'}
         ]
-    },
+    },*/
+
+    // 1 + 2
+    {
+        question: "Welcome to AStaR! You’ve been abducted by an alien. I’m bob! I love asking questions and going to school. Please be my friend for today.",
+        choices: [
+            {text: 'Of course!!', type: 'hype'},
+            {text: 'I guess I can spare some time', type: 'mugger'},
+            {text: 'Sure.', type: 'noncha'},
+            {text: "Hi bob! You're so cute <3", type: 'social'}
+        ]
+    }
 
     // 3
     {
@@ -56,7 +68,7 @@ const questions =[
         ]
     },
 
-    // 5
+    // 5 // frisbee thrown
     {
         question: "A frisbee is coming towards you! What are you doing to catch the frisbee?",
         choices: [
@@ -67,18 +79,18 @@ const questions =[
         ]
     },
 
-    // 6
+    // 6 // are you ladies okay?
     {
         question: "That was a great catch! How did you catch the frisbee?",
         choices: [
-            {text: 'With the power of physics!', type: 'artemis'},
-            {text: 'I know my biology ', type: 'athena'},
-            {text: 'I read some literature on frisbees ', type: 'poseidon'},
+            {text: 'Assuming gravity constant = 10 ms^2 ... ', type: 'artemis'},
+            {text: 'Moving faster means higher rate of aerobic respiration ', type: 'athena'},
+            {text: 'W\'s in the chat!!', type: 'poseidon'},
             {text: 'Further maths.', type: 'helios'}
         ]
     },
 
-    // 7
+    // 7 drinks stall lady
     {
         question: "That\'s amazing! Come let's go have iced lemon tea from the drinks stall lady. It's the best drink here :)",
         choices: [
@@ -91,12 +103,12 @@ const questions =[
     
     // 8
     {
-        question: "You know! I don't understand why people dislike math. Do you like math?",
+        question: "AStaR has many animals. What's your favourite animal?",
         choices: [
-            {text: 'Yes!', type: 'artemis'},
-            {text: 'NOOOO', type: 'poseidon'},
-            {text: 'Kinda...', type: 'athena'},
-            {text: 'eh', type: 'helios'}
+            {text: 'Wolves', type: 'artemis'},
+            {text: 'Sharks', type: 'poseidon'},
+            {text: 'Owls', type: 'athena'},
+            {text: 'Horses', type: 'helios'}
         ]
     },
 
@@ -111,6 +123,7 @@ const questions =[
         ]
     },
     
+    /*
     // 10
     {
         question: "Oh yeah! I promised to give you a token. Take it :)",
@@ -120,7 +133,7 @@ const questions =[
             {text: '💜', type: 'athena'},
             {text: '💙', type: 'poseidon'}
         ]
-    }
+    }*/
 ];
 
 const profiles = {
@@ -147,6 +160,7 @@ function start(){
     document.getElementById('quiz').style.display = 'block';
     document.getElementById('restart').style.display = 'none';
 
+    show_progress()
     display_qns();
 }
 
@@ -156,6 +170,7 @@ function display_qns(){
     // hide other elements
     document.getElementById('result').style.display = 'none';
     document.getElementById('restart').style.display = 'none';
+    document.getElementById('bar').style.display = 'block';
 
 
     const quiz = document.getElementById('quiz');
@@ -163,6 +178,7 @@ function display_qns(){
 
     // display qn
     let html = `<p>${question.question}</p>`
+    //html += `<img class="img" src="images/artemis.PNG">`
 
     // loop through choices
     for (const choice of question.choices){
@@ -190,8 +206,9 @@ function next_qn(event){
     // increment score -- use weights next time
     scores[chosen]++;
     
-    /*
+    
     //debug
+    /*
     const debug_container = document.querySelector('.scores');
     html = "<br><br>";
     for(const [type, score] of Object.entries(scores)){
@@ -238,7 +255,7 @@ function show_result(){
     const result = document.getElementById('result');
     let html = `<h1> Results </h1>`
     html += `<img class="img" src="images/${final_house}.PNG">`
-    html += `<p> <b> Your house: </b>${final_house} <br> <b>Your personality: </b>${final_person} </p>`
+    html += `<p> <strong> Your house: </strong>${final_house} <br> <strong>Your personality: </strong>${final_person} </p>`
     html += `<p>${profiles[final_house]} <br><br> ${profiles[final_person]}</p>`
     //html += `<img src="images/${final_house}_${final_person}.jpg>"`
     result.innerHTML = html
@@ -254,7 +271,6 @@ function breakTieRandom(candidates) {
     return candidates[Math.floor(Math.random() * candidates.length)];
 }
 
-
 function restart(){
     // reset
     current_qn = 0;
@@ -264,6 +280,10 @@ function restart(){
     document.getElementById('start-page').style.display = 'block';
     document.getElementById('quiz').style.display = 'none';
     display_qns();
+}
+
+function show_progress(){
+
 }
 
 document.getElementById('restart_btn').addEventListener('click', restart);
