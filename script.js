@@ -134,7 +134,7 @@ function display_qns(){
     const question = questions[current_qn];
 
     // display qn
-    let html = `<p>Q${current_qn}/8 ${question.question} </p>`
+    let html = `<p>Q${current_qn + 1}/8 ${question.question} </p>`
     html += `<img class="scene" src="images/scenes/${current_qn + 1}.PNG">`
 
     // loop through choices
