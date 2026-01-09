@@ -37,7 +37,7 @@ const questions =[
 
     // 1 + 2
     {
-        question: "Welcome to AStaR! You’ve been abducted by an alien. \n'I’m bob! I love asking questions and going to school. Please be my friend for today.'",
+        question: `Welcome to AStaR! You’ve been abducted by an alien. <br>'I’m bob! I love asking questions and going to school. <br>Please be my friend for today.'`,
         choices: [
             {text: 'Of course!!', type: 'hype'},
             {text: 'I guess I can spare some time', type: 'mugger'},
@@ -48,7 +48,7 @@ const questions =[
 
     // 3
     {
-        question: "'Hurray! Tell me more about yourself. What's your favourite subject?'",
+        question: `'Hurray! Tell me more about yourself. <br>What's your favourite subject?'`,
         choices: [
             {text: 'I want to try economics!', type: 'artemis'},
             {text: 'Geography', type: 'athena'},
@@ -59,7 +59,7 @@ const questions =[
 
     // 4
     {
-        question: "An alien walks by. He's calling us to play frisbee with him!",
+        question: `An alien walks by. <br>He's calling us to play frisbee with him!`,
         choices: [
             {text: 'LETS PLAYYYY', type: 'hype'},
             {text: 'I would rather not but i guess it doesn\’t hurt to try', type: 'mugger'},
@@ -68,9 +68,9 @@ const questions =[
         ]
     },
 
-    // 5 // frisbee thrown
+    // 5 frisbee thrown
     {
-        question: "A frisbee is coming towards you! What are you doing to catch the frisbee?",
+        question: `A frisbee is coming towards you! <br>What are you doing to catch the frisbee?`,
         choices: [
             {text: 'Use projectile motion calculations to estimate where to avoid the frisbee', type: 'mugger'},
             {text: "'I got this!'", type: 'social'},
@@ -81,7 +81,7 @@ const questions =[
 
     // 6 // are you ladies okay?
     {
-        question: "That was a great catch! How did you catch the frisbee?",
+        question: `'That was a great catch! <br>How did you catch the frisbee?'`,
         choices: [
             {text: 'Assuming gravity constant = 10 ms^2 ... ', type: 'artemis'},
             {text: 'Moving faster means higher rate of aerobic respiration ', type: 'athena'},
@@ -92,7 +92,7 @@ const questions =[
 
     // 7 drinks stall lady
     {
-        question: "That\'s amazing! Come let's go have iced lemon tea from the drinks stall lady. It's the best drink here :)",
+        question: `'That\'s amazing! Come let's go have iced lemon tea from the drinks stall lady. <br>It's the best drink here :)'`,
         choices: [
             {text: 'Sure! Let\'s go get some drinks', type: 'social'},
             {text: 'Sounds great', type: 'noncha'},
@@ -103,7 +103,7 @@ const questions =[
     
     // 8
     {
-        question: "AStaR has many animals. What's your favourite animal?",
+        question: `"AStaR has many animals. <br>What's your favourite animal?"`,
         choices: [
             {text: 'Wolves', type: 'artemis'},
             {text: 'Sharks', type: 'poseidon'},
@@ -114,10 +114,10 @@ const questions =[
 
     // 9
     {
-        question: "Well that was my last question. I got to go now! It was fun spending time with you in AStaR",
+        question: `"Well that was my last question. I got to go now! <br>It was fun spending time with you in AStaR"`,
         choices: [
-            {text: 'AWOOOOO', type: 'artemis'},
-            {text: 'NEIGHHH', type: 'helios'},
+            {text: 'AWOOOOOOO', type: 'artemis'},
+            {text: 'NEIGHHHHH', type: 'helios'},
             {text: 'HOOT HOOT', type: 'athena'},
             {text: 'AWOOSHAA!', type: 'poseidon'}
         ]
@@ -282,7 +282,8 @@ function restart(){
 }
 
 function show_progress(){
-    return;
+    let bar = document.getElementById('.bar');
+    //bar.innerHTML = `${}`
 }
 
 document.getElementById('restart_btn').addEventListener('click', restart);
