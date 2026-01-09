@@ -4,49 +4,22 @@ var scores = {
     helios: 0,
     athena: 0,
     poseidon: 0,
-    hype: 0,
-    mugger: 0,
-    noncha: 0,
-    social: 0
 };
 
 // questions
 const questions =[
-    /*
-    // 1 screaming aliens
-    {
-        question: "Welcome to AStaR! You’ve been abducted by an alien.",
-        choices: [
-            {text: 'LETSGOOOOO!!', type: 'hype'},
-            {text: 'Assess the situation', type: 'mugger'},
-            {text: 'OK', type: 'noncha'},
-            {text: 'Hi! What\'s your name?', type: 'social'}
-        ]
-    },
-
-    //2
-    {
-        question: "I’m bob! I love asking questions and going to school. Please be my friend for today. I\'ll give you a token at the end :)",
-        choices: [
-            {text: 'Of course!!', type: 'hype'},
-            {text: 'I guess I can spare some time', type: 'mugger'},
-            {text: 'Sure.', type: 'noncha'},
-            {text: "Hi bob! You're so cute <3", type: 'social'}
-        ]
-    },*/
-
-    // 1 + 2
+    // 1 
     {
         question: `Welcome to AStaR! You’ve been abducted by an alien. <br>'I’m bob! I love asking questions and going to school. <br>Please be my friend for today.'`,
         choices: [
-            {text: 'Of course!!', type: 'hype'},
-            {text: 'I guess I can spare some time', type: 'mugger'},
-            {text: 'Sure.', type: 'noncha'},
-            {text: "Hi bob! You're so cute <3", type: 'social'}
+            {text: 'Of course!!', type: 'artemis'},
+            {text: 'I guess I can spare some time', type: 'athena'},
+            {text: 'Sure.', type: 'poseidon'},
+            {text: "Hi bob! You're so cute <3", type: 'helios'}
         ]
     },
 
-    // 3
+    // 2
     {
         question: `'Hurray! Tell me more about yourself. <br>What's your favourite subject?'`,
         choices: [
@@ -57,29 +30,29 @@ const questions =[
         ]
     },
 
-    // 4
+    // 3
     {
         question: `An alien walks by. <br>He's calling us to play frisbee with him!`,
         choices: [
-            {text: 'LETS PLAYYYY', type: 'hype'},
-            {text: 'I would rather not but i guess it doesn\’t hurt to try', type: 'mugger'},
-            {text: 'Hurray! What\’s his name?', type: 'social'},
-            {text: '...', type: 'noncha'}
+            {text: 'LETS PLAYYYY', type: 'artemis'},
+            {text: 'I would rather not but i guess it doesn\’t hurt to try', type: 'athena'},
+            {text: 'Hurray! What\’s his name?', type: 'helios'},
+            {text: '...', type: 'poseidon'}
         ]
     },
 
-    // 5 frisbee thrown
+    // 4 frisbee thrown
     {
         question: `A frisbee is coming towards you! <br>What are you doing to catch the frisbee?`,
         choices: [
-            {text: 'Use projectile motion calculations to estimate where to avoid the frisbee', type: 'mugger'},
-            {text: "'I got this!'", type: 'social'},
-            {text: 'Scream ', type: 'hype'},
-            {text: 'Stand. You attract frisbees.', type: 'noncha'}
+            {text: 'Use projectile motion calculations to estimate where to avoid the frisbee', type: 'athena'},
+            {text: "'I got this!'", type: 'helios'},
+            {text: 'Scream ', type: 'artemis'},
+            {text: 'Stand. You attract frisbees.', type: 'poseidon'}
         ]
     },
 
-    // 6 // are you ladies okay?
+    // 5 are you ladies okay?
     {
         question: `'That was a great catch! <br>How did you catch the frisbee?'`,
         choices: [
@@ -90,18 +63,18 @@ const questions =[
         ]
     },
 
-    // 7 drinks stall lady
+    // 6 drinks stall lady
     {
         question: `'That\'s amazing! Come let's go have iced lemon tea from the drinks stall lady. <br>It's the best drink here :)'`,
         choices: [
-            {text: 'Sure! Let\'s go get some drinks', type: 'social'},
-            {text: 'Sounds great', type: 'noncha'},
-            {text: 'YAAAAAY', type: 'hype'},
-            {text: 'No. I only drink water', type: 'mugger'}
+            {text: 'Sure! Let\'s go get some drinks', type: 'helios'},
+            {text: 'Sounds great', type: 'poseidon'},
+            {text: 'YAAAAAY', type: 'artemis'},
+            {text: 'No. I only drink water', type: 'athena'}
         ]
     },
     
-    // 8
+    // 7
     {
         question: `"AStaR has many animals. <br>What's your favourite animal?"`,
         choices: [
@@ -112,39 +85,27 @@ const questions =[
         ]
     },
 
-    // 9
+    // 8
     {
         question: `"Well that was my last question. I got to go now! <br>It was fun spending time with you in AStaR"`,
         choices: [
             {text: 'AWOOOOOOO', type: 'artemis'},
             {text: 'NEIGHHHHH', type: 'helios'},
             {text: 'HOOT HOOT', type: 'athena'},
-            {text: 'AWOOSHAA!', type: 'poseidon'}
+            {text: 'AWOOSHAAA', type: 'poseidon'}
         ]
     }
-    
-    /*
-    // 10
-    {
-        question: "Oh yeah! I promised to give you a token. Take it :)",
-        choices: [
-            {text: '💚', type: 'artemis'},
-            {text: '❤️', type: 'helios'},
-            {text: '💜', type: 'athena'},
-            {text: '💙', type: 'poseidon'}
-        ]
-    }*/
 ];
 
 const profiles = {
-    artemis: `You dominate the night. <br>Artemis students are analytical and curious, often gravitating toward Physics, Chemistry, Math, and Economics.`,
-    helios: `You dominate the sky. <br>Helios students walk their own path, known for unconventional subject combinations and creative thinking.`,
-    athena: `You dominate wisdom. <br>Athena students value understanding and balance, commonly taking Biology, Chemistry, Math, and Economics.`,
-    poseidon: `You dominate the depths. <br>Poseidon students thrive in expression and interpretation, often leaning toward arts and humanities, sometimes paired with sciences.`,
-    hype: `“Energy first, think later.” <br><br>You are the embodiment of enthusiasm. When something exciting happens, you’re already there — probably yelling, probably smiling. You thrive on momentum, spontaneity, and shared excitement.`,
-    mugger: `“Locked in. No distractions.”<br><br>You are focused, driven, and determined. When you set a goal, you commit to it fully — whether it’s academics, self-improvement, or proving something (to yourself or others).`,
-    social: `“People first, always.” <br><br>You’re warm, friendly, and naturally curious about others. Conversations energise you, and you value connection over competition.`,
-    noncha: `“It is what it is.”<br><br>You’re calm, composed, and unfazed. While chaos unfolds around you, you remain cool and grounded. You don’t rush, and you don’t stress unless absolutely necessary.`
+    artemis: `“Energy first, think later.”
+    You dominate the night. Artemis students are analytical and curious, often gravitating toward Physics, Chemistry, Math, and Economics.<br><br>You are the embodiment of enthusiasm. When something exciting happens, you’re already there — probably yelling, probably smiling. You thrive on momentum, spontaneity, and shared excitement.`,
+    helios: `“People first, always.” 
+    You dominate the sky. Helios students walk their own path, known for unconventional subject combinations and creative thinking.<br><br>You’re warm, friendly, and naturally curious about others. Conversations energise you, and you value connection over competition.`,
+    athena: `“Locked in. No distractions.”
+    You dominate wisdom. Athena students value understanding and balance, commonly taking Biology, Chemistry, Math, and Economics.<br><br>You are focused, driven, and determined. When you set a goal, you commit to it fully — whether it’s academics, self-improvement, or proving something`,
+    poseidon: `“It is what it is.”
+    You dominate the depths. <br>Poseidon students thrive in expression and interpretation, often leaning toward arts and humanities, sometimes paired with sciences.<br><br>You’re calm, composed, and unfazed. While chaos unfolds around you, you remain cool and grounded. You don’t rush, and you don’t stress unless absolutely necessary.`
 }
 
 // starting 
@@ -229,33 +190,19 @@ function next_qn(event){
 
 // result
 function show_result(){
-    // split dictionary 
-    const sliceAt = 4;
-    const dataArr = Object.entries(scores);
-    const house_scores = Object.fromEntries(dataArr.slice(0, sliceAt));
-    const person_scores = Object.fromEntries(dataArr.slice(sliceAt));
-
-    // find highest affinity
     let maxScore_house = Math.max(...Object.values(house_scores));
     let house = Object.keys(house_scores).filter(
         house => house_scores[house] === maxScore_house
     );
 
-    let maxScore_person = Math.max(...Object.values(person_scores));
-    let personality = Object.keys(person_scores).filter(
-        personality => person_scores[personality] === maxScore_person
-    );
-
     const final_house = breakTieRandom(house)
-    const final_person = breakTieRandom(personality)
 
     // display
     const result = document.getElementById('result');
     let html = `<h1> Results </h1>`
     html += `<img class="img" src="images/${final_house}.PNG">`
-    html += `<p> <strong> Your house: </strong>${final_house} <br> <strong>Your personality: </strong>${final_person} </p>`
-    html += `<p>${profiles[final_house]} <br><br> ${profiles[final_person]}</p>`
-    //html += `<img src="images/${final_house}_${final_person}.jpg>"`
+    html += `<p> <strong> Your house: </strong>${final_house} <br> </p>`
+    html += `<p>${profiles[final_house]} <br></p>`
     result.innerHTML = html
 
     document.getElementById('quiz').style.display = 'none';
